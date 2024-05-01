@@ -28,6 +28,7 @@ namespace ChatAppServer.WebAPI.Hubs
             if (user is not null)
             {
                 user.Status = "Offline";
+                user.LastActiveDate = DateTime.Now;
                 await context.SaveChangesAsync();
 
                 await Clients.All.SendAsync("Users", user);

@@ -11,5 +11,7 @@
         public Guid ToUserId { get; set; }
         public string Message { get; set; } = string.Empty;
         public DateTime Date { get; set; }
+        public bool ReadStatus { get; set; }
+        public DateTime ReadDate { get; set; }
     }
 }
